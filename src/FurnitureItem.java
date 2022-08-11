@@ -17,9 +17,11 @@ public class FurnitureItem {
 
 
     }
-    double discount(double price){
-        double discount = (price -(price * 5/100));
-        return discount;
+   public double discount(double price){
+        if(furnitureUsage.equalsIgnoreCase("outdoor"))
+            price = (price -(price *5/100));
+        System.out.println("discounted value " + price);
+        return price;
     }
 
 }
